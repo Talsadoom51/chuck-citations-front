@@ -1,13 +1,7 @@
 import './App.css'
+import { chuckCitations } from './assets/data'
 
 function App() {
-
-  const chuckCitations = [
-    "The only thing I can't do is die.",
-    "I don't need a weapon. My body is my weapon.",
-    "I don't need a reason to fight. I just do it.",
-    "I don't need a plan. I just do it.",
-  ]
 
   const getRandomCitation = () => {
     const randomIndex = Math.floor(Math.random() * chuckCitations.length)
