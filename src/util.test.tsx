@@ -4,6 +4,6 @@ import { add } from './util';
 
 describe('testing add()', () => {
     it('should return 3 when adding 1 and 2', () => {
-        expect(add(1, 2)).toBe(5);
+        expect(add(1, 2)).toBe(3);
     });
 })
