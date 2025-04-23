@@ -20,8 +20,8 @@ pipeline {
     stage('Build Docker Image') {
       steps {
         sh '''
-        docker build -t mon-registry/chuck-front:latest .
-        docker push mon-registry/chuck-front:latest
+        docker build -t 192.168.56.151:5000/chuck-front:latest .
+        docker push 192.168.56.151:5000/chuck-front:latest
         '''
       }
     }
