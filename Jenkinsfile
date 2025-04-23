@@ -1,5 +1,5 @@
 pipeline {
-  agent { label 'dind' }
+  agent { label 'dind-agent' }
 
   stages {
     stage('Checkout') {
@@ -29,7 +29,7 @@ pipeline {
     stage('Deploy') {
       steps {
         sh '''
-        ssh vagrant@prod "docker pull mon-registry/chuck-front:latest && docker restart chuck_front"
+        ssh vagrant@192.168.56.152 "docker pull mon-registry/chuck-front:latest && docker restart chuck_front"
         '''
       }
     }
